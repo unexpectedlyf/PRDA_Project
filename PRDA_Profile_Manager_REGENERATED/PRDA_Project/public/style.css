@@ -1,0 +1,128 @@
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  @apply bg-gray-200;
+  font-family: Arial, sans-serif;
+  color: #17223b;
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.panel {
+  @apply bg-white p-4 rounded-md shadow-md;
+  width: min(100%, 440px);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 14px 45px #192f5017;
+}
+
+.brand {
+  @apply text-blue-600 text-xs font-semibold leading-none;
+  color: #315dc6;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+h1 {
+  @apply text-3xl font-bold mb-2;
+  margin: 20px 0 6px;
+  font-size: 30px;
+}
+
+.muted {
+  @apply text-gray-600 text-sm leading-normal;
+  color: #66748c;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+label {
+  @apply block text-gray-700 text-sm font-semibold mb-2;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 15px 0;
+}
+
+input {
+  @apply block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500;
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+  padding: 12px;
+  border: 1px solid #ccd5e5;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 400;
+}
+
+input:focus {
+  @apply outline-2 outline-offset-1 outline-blue-500;
+  outline: 2px solid #315dc6;
+  outline-offset: 1px;
+}
+
+button {
+  @apply w-full px-3 py-2 bg-blue-600 text-white border border-transparent rounded-md shadow-sm hover:bg-blue-700 transition duration-150 ease-in-out;
+  width: 100%;
+  padding: 13px;
+  background: #315dc6;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+button:hover {
+  @apply bg-blue-700;
+  background: #244aab;
+}
+
+.message {
+  @apply bg-white-100 p-4 text-sm text-red-700 bg-red-50 border border-red-200 rounded-md shadow-sm;
+  background: #fff0f0;
+  color: #a61c27;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.message.success {
+  @apply bg-green-100 text-green-700 bg-green-50 border border-green-200 rounded-md shadow-sm;
+  background: #e7f7ee;
+  color: #16643b;
+}
+
+.foot {
+  @apply text-center text-gray-600 text-sm;
+  text-align: center;
+  color: #66748c;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+a {
+  @apply text-blue-600;
+  color: #315dc6;
+}
+
+.top {
+  @apply flex items-center justify-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.secondary {
+  @apply w-auto
+}

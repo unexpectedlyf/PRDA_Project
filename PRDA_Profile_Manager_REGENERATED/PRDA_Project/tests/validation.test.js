@@ -1,0 +1,11 @@
+const { test } = require('node:test');
+const assert = require('node:assert/strict');
+const { validateLogin, validateProfile } = require('../validation');
+const good = { email: 'person@example.com', phone: '0821234567', dob: '2000-05-20' };
+test('accepts valid profile', () => assert.equal(validateProfile(good), null));
+test('rejects malformed email', () => assert.match(validateProfile({ ...good, email: 'bad' }), /email/));
+test('rejects alphabetic phone', () => assert.match(validateProfile({ ...good, phone: '082ABC1234' }), /Phone/));
+test('rejects impossible date', () => assert.match(validateProfile({ ...good, dob: '2025-02-30' }), /birth/));
+test('rejects future date', () => assert.match(validateProfile({ ...good, dob: '2099-01-01' }), /birth/));
+test('rejects missing login password', () => assert.match(validateLogin({ username: 'alice', password: '' }), /username and password/));
+test('accepts login fields', () => assert.equal(validateLogin({ username: 'alice', password: 'secret' }), null));
