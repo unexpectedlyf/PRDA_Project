@@ -1,1 +1,71 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Register | Profile Manager</title><link rel="stylesheet" href="/style.css"></head><body><main class="panel"><div class="brand">PROFILE MANAGER</div><h1>Create an account</h1><p class="muted">Set up a profile to try the application.</p><form id="register-form"><label>Username<input name="username" required minlength="3" maxlength="30" autocomplete="username"></label><label>Password<input name="password" type="password" required minlength="10" autocomplete="new-password"></label><label>Email<input name="email" type="email" required></label><label>Phone (digits only)<input name="phone" inputmode="numeric" pattern="[0-9]{7,15}" required></label><label>Date of birth<input name="dob" type="date" required></label><p id="message" class="message" role="alert" hidden></p><button type="submit">Create account</button></form><p class="foot"><a href="/">Back to login</a></p></main><script src="/app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Set the page's text encoding and help it fit different screen sizes. -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register | Profile Manager</title>
+
+    <!-- Use the same styles as the other pages in the application. -->
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <!-- Keep the registration form centered inside the shared page panel. -->
+    <main class="panel">
+      <div class="brand">PROFILE MANAGER</div>
+      <h1>Create an account</h1>
+      <p class="muted">Set up a profile to try the application.</p>
+
+      <!-- Required fields and browser checks give users quick feedback. -->
+      <form id="register-form">
+        <label>
+          Username
+          <input
+            name="username"
+            required
+            minlength="3"
+            maxlength="30"
+            autocomplete="username"
+          >
+        </label>
+        <label>
+          Password
+          <input
+            name="password"
+            type="password"
+            required
+            minlength="10"
+            autocomplete="new-password"
+          >
+        </label>
+        <label>
+          Email
+          <input name="email" type="email" required>
+        </label>
+        <label>
+          Phone (digits only)
+          <input
+            name="phone"
+            inputmode="numeric"
+            pattern="[0-9]{7,15}"
+            required
+          >
+        </label>
+        <label>
+          Date of birth
+          <input name="dob" type="date" required>
+        </label>
+        <p id="message" class="message" role="alert" hidden></p>
+        <button type="submit">Create account</button>
+      </form>
+
+      <!-- Give existing users an easy way to return to the login page. -->
+      <p class="foot">
+        <a href="/">Back to login</a>
+      </p>
+    </main>
+
+    <!-- Handle registration requests and display any returned messages. -->
+    <script src="/app.js"></script>
+  </body>
+</html>
